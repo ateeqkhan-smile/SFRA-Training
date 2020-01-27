@@ -30,7 +30,8 @@ server.get('Show', cache.applyPromotionSensitiveCache, consentTracking.consent, 
             resources: showProductPageHelperResult.resources,
             breadcrumbs: showProductPageHelperResult.breadcrumbs,
             canonicalUrl: showProductPageHelperResult.canonicalUrl,
-            schemaData: showProductPageHelperResult.schemaData
+            schemaData: showProductPageHelperResult.schemaData,
+           
         });
     }
     next();
