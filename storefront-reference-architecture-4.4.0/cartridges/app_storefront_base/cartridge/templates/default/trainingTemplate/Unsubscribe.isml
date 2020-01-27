@@ -1,0 +1,42 @@
+<!--- TEMPLATENAME: Unsubscribe.isml --->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            
+				<div class="hero slant-down login-banner">
+					<h1>${Resource.msg('Newslettersubscription.header.title.unsubscibe', 'training', null)}</h1>
+				</div>
+				
+				
+				 	<!--- --->
+				<div class="card">
+					<form action="${pdict.actionUrl}" class="login" method="POST"
+						name="SFRAHelloForm">
+						<div class="form-group required">
+							<label> ${Resource.msg('Newslettersubscription.form.label.email', 'training', null)} </label> <input type="input" id="email"
+								class="form-control" name="email">
+						</div>
+				
+						<button type="submit" class="btn btn-block btn-success" >${pdict.buttonName}</button>
+						<!-- <button type="cancel" class="btn btn-block btn-primary">Cancel</button> -->
+						
+						<!-- <a href="Unsubscribe-Show">Unsubscribe Me</a> -->
+						
+						<isif condition="${pdict.Details == 1}"> 
+							<h3 style="color:red;">${Resource.msgf('Newslettersubscription.form.label.firstName', 'training', null, pdict.firstName )} </h3>
+							<h3 style="color:red;">${Resource.msgf('Newslettersubscription.form.label.lastName', 'training', null, pdict.lastName )}</h3>
+							<a href="${pdict.editingUrl}">${Resource.msg('Newslettersubscription.form.anchor.update', 'training', null)}</a>
+				
+						</isif>
+						
+						
+					</form>
+				</div>
+				
+        </div>
+    </div>
+</div>
+
