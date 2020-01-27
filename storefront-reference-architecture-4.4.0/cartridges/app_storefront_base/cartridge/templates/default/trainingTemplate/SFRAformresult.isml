@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: SFRAformresult.isml --->
+
+ <p>${Resource.msgf('Newslettersubscription.form.label.firstName', 'training', null, pdict.firstName )}.</p>
+<p>${Resource.msgf('Newslettersubscription.form.label.lastName', 'training', null, pdict.lastName )}.</p> 
+<h1>${Resource.msgf('Newslettersubscription.form.update', 'training', null, pdict.email )}</h1>
+

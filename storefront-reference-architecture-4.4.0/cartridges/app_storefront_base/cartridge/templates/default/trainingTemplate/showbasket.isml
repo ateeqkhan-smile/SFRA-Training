@@ -1,0 +1,5 @@
+<br/>
+<isloop
+items="${pdict.Basket.getProductLineItems()}" var="productLineItem">
+${productLineItem.product.name}<br/>
+</isloop>

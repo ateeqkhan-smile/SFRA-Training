@@ -1,0 +1,6 @@
+
+${Resource.msg('training.message', 'training', null)} <isprint value="${pdict.Message}" />
+<h1>${Resource.msg('Static.helloworld', 'training', null)} </h1>
+
+
+

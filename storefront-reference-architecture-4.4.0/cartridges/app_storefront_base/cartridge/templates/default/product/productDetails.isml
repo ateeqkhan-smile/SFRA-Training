@@ -5,7 +5,7 @@
         assets.addJs('/js/productDetail.js');
         assets.addCss('/css/product/detail.css');
     </isscript>
-
+	
     <isset name="product" value="${pdict.product}" scope="page" />
     <isset name="isQuickView" value="${false}" scope="page" />
     <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-
+			
             <div class="row">
                 <!-- Product Images Carousel -->
                 <isinclude template="product/components/imageCarousel" />
@@ -109,12 +109,13 @@
                                 <isinclude template="product/components/promotions" />
                             </div>
                         </div>
-
+	
                         <div class="prices-add-to-cart-actions">
                             <div class="row">
                                 <div class="col-12">
                                     <!-- Prices -->
                                     <div class="prices">
+                                    	<i>You Save :</i><isprint value="${pdict.Discount}" />%
                                         <isset name="price" value="${product.price}" scope="page" />
                                         <isinclude template="product/components/pricing/main" />
                                     </div>
