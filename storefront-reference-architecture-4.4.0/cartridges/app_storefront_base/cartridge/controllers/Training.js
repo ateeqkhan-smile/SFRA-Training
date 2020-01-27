@@ -11,7 +11,7 @@ server.get('Show', cache.applyDefaultCache, function (req, res, next) {  //regis
 	    var showProductPageHelperResult = productHelper.showProductPage(req.querystring, req.pageMetaData);
 	    var productType = showProductPageHelperResult.product.productType;
 	    
-		var priceModel = require('dw/catalog/ProductMgr').getProduct( req.querystring.pid ).getPriceModel();
+		var priceModel = require('dw/catalog/ProductMgr').getProduct( req.querystring.pid ).getPriceModel();//getting product model
 		var listPrice = parseInt( priceModel.getPriceBookPrice( priceModel.getPriceInfo().getPriceBook().getParentPriceBook().getID() ).toString().replace( "USD", "" ) );
 		var salesPrice = parseInt( priceModel.getPrice().toString().replace( "USD", "" )) ;
 		var discountPercentage = Math.round((( listPrice - salesPrice ) / listPrice ) * 100 );
@@ -31,8 +31,8 @@ server.get('Show', cache.applyDefaultCache, function (req, res, next) {  //regis
 	        });
 	    }
 	
-	//renders the hompage template
+	
     next();            //notifies middleware chain that it can move to the next step or terminate if this is the last step.
 });
-
+// the above function will show product details with percentage discount between lsit price and salesprice.
 module.exports = server.exports();

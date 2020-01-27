@@ -15,7 +15,7 @@ server.get('bask', function(req, res, next) {
     pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
    
    
-    next();
+    next();//notifies middleware chain that it can move to the next step or terminate if this is the last step.
 }, pageMetaData.computedPageMetaData);
 
 module.exports = server.exports();

@@ -10,14 +10,13 @@ server.get('Show', cache.applyDefaultCache, function (req, res, next) {
 	var priceModel = product.getPriceModel();
 	var listPrice1	= parseInt(priceModel.getPriceBookPrice(priceModel.getPriceInfo().getPriceBook().getParentPriceBook().getID()).toString().replace("USD", ""));
 	var salesPrice = parseInt(priceModel.getPrice().toString().replace("USD", "")) ;
-	var discount = listPrice1 - salesPrice;
-	var discountPercentage = Math.round((discount / listPrice1) * 100);
+	var discountPercentage = Math.round(((listPrice1 - salesPrice) / listPrice1) * 100);
 
 	if(product === null){
 		   res.render('/trainingTemplate/productnotfound', {message: "product not found "+req.querystring.pid}); 
 	   }
 	   else{
-	   res.render('/trainingTemplate/productfound', { myProduct: product, price: salesPrice, pp: listPrice1, tet: discountPercentage });
+	   res.render('/trainingTemplate/productfound', { myProduct: product, price: salesPrice, pp: listPrice1, tet: discountPercentage, tre: testing });
 	  }	
     next();           
 });

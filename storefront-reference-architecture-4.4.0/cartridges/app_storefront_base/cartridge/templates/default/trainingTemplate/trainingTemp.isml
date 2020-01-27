@@ -1,6 +1,6 @@
 
-The message is: <isprint value="${pdict.Message}" />
-<h1>Static HelloWorld</h1>
+${Resource.msg('training.message', 'training', null)} <isprint value="${pdict.Message}" />
+<h1>${Resource.msg('Static.helloworld', 'training', null)} </h1>
 
 
 
