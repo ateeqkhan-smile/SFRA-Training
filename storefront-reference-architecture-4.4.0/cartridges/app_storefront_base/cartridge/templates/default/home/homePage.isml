@@ -1,13 +1,19 @@
 <isdecorate template="common/layout/page">
     <isscript>
-        var assets = require('*/cartridge/scripts/assets.js');
+        var assets = require('*/cartridge/sclripts/assets.js');
         assets.addJs('/js/productTile.js');
         assets.addCss('/css/homePage.css');
+         <!--this is digital script which is also used as server side scripting language  -->
     </isscript>
 
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
         <isslot id="home-main-m" description="Main home page slot." context="global" />
+    </div>
+    
+    <div class="home-main homepage">
+   		 <isslot id="training" description="this slot is for training purpose" context="global" />
+   		 
     </div>
 
     <div class="container home-categories homepage">
