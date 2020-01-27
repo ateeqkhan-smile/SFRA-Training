@@ -1,0 +1,2 @@
+<!--- TEMPLATENAME: unsubscribedmessage.isml --->
+<h1>${Resource.msgf('Newslettersubscription.unsubscribed.message', 'training', null, pdict.email )}</h1>
