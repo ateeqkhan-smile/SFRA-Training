@@ -1,0 +1,64 @@
+<!--- TEMPLATENAME: NewsletterSubscription.isml --->
+
+<!--  <isscript>
+var assets = require('*/cartridge/scripts/assets.js');
+assets.addCss('/css/helloform.css'); 
+assets.addJs('/js/helloform.js'); </isscript> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            
+            
+            	
+            
+            
+				<div class="hero slant-down login-banner">
+				<h1>${Resource.msg('Newslettersubscription.header.title', 'training', null)}</h1>
+					
+					
+				</div>
+				
+				<!--- --->
+				<div class="card">
+					<form action="${pdict.actionUrl}" class="login" method="POST"
+						name="SFRAHelloForm">
+				
+						<div class="form-group required">
+									<label class="form-control-label" for="registration-form-fname">
+            							<isprint value="${pdict.SFRAHelloForm.firstName.label}" encoding="htmlcontent" />
+        							</label>
+								 <input type="input" id="firstName"	class="form-control" name="firstName" value="${pdict.SFRAHelloForm.firstName.value}">
+						</div>
+						
+						<div class="form-group required">
+									<label class="form-control-label" for="registration-form-fname">
+            							<isprint value="${pdict.SFRAHelloForm.lastName.label}" encoding="htmlcontent" />
+        							</label>
+							 <input type="input" id="lastName"class="form-control" name="lastName" value="${pdict.SFRAHelloForm.lastName.value}">
+						</div>
+						
+						<div class="form-group required">
+									<label class="form-control-label" for="registration-form-fname">
+            							<isprint value="${pdict.SFRAHelloForm.email.label}" encoding="htmlcontent" />
+        							</label>
+							 <input type="input" id="email"	class="form-control" name="email" value="${pdict.SFRAHelloForm.email.value}">
+						</div>
+				
+						<button type="submit" class="btn btn-block btn-success">${Resource.msg('Newslettersubscription.form.button.submit', 'training', null)}</button>
+						<!-- <button type="cancel" class="btn btn-block btn-primary">${Resource.msg('Newslettersubscription.form.button.cancel', 'training', null)}</button> -->
+						
+						<a href="Unsubscribe-Show">${Resource.msg('Newslettersubscription.form.anchor.unsubscribe', 'training', null)}</a><br/><!--delete the custom objectr created  -->
+						
+						<a href="Checking-Show">${Resource.msg('Newslettersubscription.form.anchor.Check', 'training', null)}</a><br/><!--Reading the custom object  -->
+						 <!-- <a href="Checking-Update">Update my Email</a>Update Email  -->
+						
+										
+						</form>
+				</div>
+        </div>
+    </div>
+</div>
+
