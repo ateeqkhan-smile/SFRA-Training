@@ -1,3 +1,0 @@
-<!--- TEMPLATENAME: ISMLtest.isml --->
-<isset name="sessionVar" value="${12312321}" scope = "session"/>
-${session.custom.sessionVar}<br/>

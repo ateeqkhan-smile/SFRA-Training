@@ -1,3 +1,4 @@
+<!--- TEMPLATENAME: productfound.isml --->
 <isset name="price" value="${myProduct.price}" scope="page" />
  <span class="value" content="${price}">
 <h1>${pdict.myProduct.name} has been found</h1>
@@ -14,6 +15,7 @@
 
 
 
+<!-- <h1>${pdict.tre}</h1> -->
+<h1>${Resource.msgf('Newslettersubscription.form.label.discountpercentage', 'training', null, pdict.tet )}</h1>
 
-<h1>Discount Percentage :-${pdict.tet} %</h1>
-
+<!-- ${Resource.msgf('Newslettersubscription.form.label.discountpercentage', 'training', null, pdict.tet )} -->
