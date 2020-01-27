@@ -1,0 +1,4 @@
+<!--- TEMPLATENAME: SFRATemplate1.isml --->
+<!--- TEMPLATENAME: SFRATemplate1.isml --->
+
+<h1>${Resource.msgf('Newslettersubscription.form.Message.subscriber', 'training', null, pdict.email )}</h1>
